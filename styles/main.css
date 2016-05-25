@@ -1,0 +1,53 @@
+#board {
+	margin: 40px auto 60px;
+	width: 420px;
+	height: 420px;
+	padding: 20px;
+	display: table;
+	border-collapse: collapse;
+}
+
+.cell {
+	height: 140px;
+	width: 140px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.btn {
+	display: block;
+	text-align: center;
+	border: 1px solid #444;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 12px;
+	color: #444;
+	margin: 0 auto;
+}
+
+.o {
+	background: url('../images/o.png') no-repeat;
+	background-position: center;
+}
+
+.x {
+	background: url('../images/x.png') no-repeat;	
+	background-position: center;
+}
+
+/* Keep these two in this order */
+.cell:nth-child(n+4) {
+	border-top: solid 2px #444;
+	border-bottom: solid 2px #444;
+}
+.cell:nth-child(n+7) {
+	border: none;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.cell:nth-child(3n+2), .cell:nth-child(3n+3) {
+	border-left: solid 2px #444;
+}
